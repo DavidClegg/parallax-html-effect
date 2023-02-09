@@ -1,0 +1,52 @@
+<style>
+    :root{
+        --y: 0%;
+    }
+    body{
+        height: 200vh;
+        background: url("pexels-valeriia-miller-10396930.jpg");
+        background-position-y: var(--y);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        margin: 0;
+    }
+    p{
+        color: #eee;
+        font-size: 2rem;
+        max-width: 60rem;
+        text-shadow: 0px 0px 10px black;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        background: black;
+        width: 100vw;
+    }
+</style>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestias repellat mollitia minus reprehenderit fuga eius dolores quae consequatur nihil reiciendis doloribus voluptatum, numquam quo in cupiditate quia quas vitae.</p>
+</body>
+<footer>
+    <p>Just a bunch of footer things that I don't need to worry about</p>
+</footer>
+<script>
+    let maxY = document.scrollingElement.scrollTopMax;
+    console.log(`Max Scroll: ${maxY}`)
+    window.addEventListener("scroll", e=>{
+        let scrollY = window.scrollY;
+        console.log(`Current Scroll: ${scrollY}`)
+        let ratio = (100*(scrollY/maxY));
+        console.log(`Percent: ${ratio}`)
+        document.documentElement.style.setProperty("--y", `${ratio*0.9}%`);
+    })
+</script>
